@@ -27,7 +27,7 @@ class ShareIt extends CI_Controller {
 	    }
 
 	    if ($user) {
-	    	$data['logout_url'] = $this->facebook->getLogoutUrl();
+	    	$data['logout_url'] = $this->facebook->getLogoutUrl(array('next' => site_url().'shareIt/shareLogout/'));
 	    } else {
 	        $data['login_url'] = $this->facebook->getLoginUrl();
 	    }

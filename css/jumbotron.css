@@ -1,0 +1,119 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.jumbotron {
+	background-image:url('../images/header-background.jpg');
+	background-size: cover;
+	background-position:center;
+	height:300px;
+}
+
+.nomargin {
+  margin:0;
+}
+
+.small {
+	height:150px;
+}
+
+.jumbotron h1 {
+	text-shadow: 0 0 3px #000;
+	color: #ffffff;
+}
+
+.starter-template {
+  padding: 0px 10px;
+}
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 768px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+
+  .hidewhensmall{
+    display:none;
+  }
+}
+
+.buttons-container {
+	margin-bottom:20px;
+}
+
+.tab-content {
+  margin-top: -1px;
+}
+
+#quicksearch-container {
+  margin-bottom: 10px;
+}
+
+.transparent {
+  zoom: 1;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+}
+
+.fullwidth{
+  width: 100%;
+}
+
+/*
+* Facebook icons
+*/
+.facebook-icon {
+background-size: auto;
+background-repeat: no-repeat;
+display: inline-block;
+height: 16px;
+width: 16px;
+margin-right:5px;
+margin-left:5px;
+}
+
+.facebook-page {
+  background-image: url("../../images/facebook-icons.png");
+  background-position: 0 -204px;
+}
+
+.facebook-group {
+  background-image: url("../../images/facebook-icons.png");
+  background-position:0 -51px
+}
+
+#event-pills {
+  margin-bottom: 15px;
+}

@@ -6,7 +6,6 @@ class Students_model extends CI_Model{
 		
 		$this->db->from('students');
 		$this->db->order_by("name", "asc");
-		$this->db->where("semester LIKE '2014-15%'");
 		$query = $this->db->get();
 		
 		if($query->num_rows() > 0){
@@ -21,6 +20,21 @@ class Students_model extends CI_Model{
 		$this->db->from('students');
 		$this->db->order_by("name", "asc");
 		$this->db->where("type = 'esn'");
+		$query = $this->db->get();
+		
+		if($query->num_rows() > 0){
+			foreach($query->result() as $row){
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
+
+	function getStudentsByAcademicYear($year){
+		$this->db->select('*');
+		$this->db->from('students');
+		$this->db->where("semester LIKE '".$year."-%'");
+		$this->db->order_by("name", "asc");
 		$query = $this->db->get();
 		
 		if($query->num_rows() > 0){

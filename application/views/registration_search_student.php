@@ -28,8 +28,7 @@
               <?php } ?>
               </div> <!-- row end -->
             <?php } ?>
-	          <div class="row">
-              <div>
+            <div class="row">
                 <?php
                 if($event->maxNumPeople == 0) {
                   $event->maxNumPeople = $registrations->total;
@@ -50,7 +49,8 @@
                     <span class="sr-only"><?php echo $presentage; ?>% Complete</span>
                   </div>
                 </div>
-              </div>
+            </div>
+            <div class="row">
               <div id="quicksearch-container" class="col-sm-10">
                 <form class="form-inline" role="form">
                   <div class="form-group fullwidth">
@@ -63,26 +63,51 @@
                 <span class="glyphicon glyphicon-question-sign"></span> Need help?
               </div>
             </div>
+
+            <div class="row" id="student-pills">
+                <ul class="nav nav-pills" id="myStudentTabs">
+                  <?php 
+                  $i = 1;
+                  foreach ($ay_titles as $title) {
+                    if($i == 1) {
+                      echo '<li class="active"><a href="#studentTab1" data-toggle="tab">'.$title.'</a></li>'; 
+                    } else {
+                      echo '<li><a href="#studentTab'.$i.'" data-toggle="tab">'.$title.'</a></li>';
+                    }
+                    $i++;
+                  } ?>
+                  <li><a href="#esnersTab" data-toggle="tab">ESNers</a></li>
+                </ul>
+            </div>
             <div class="row">
-              <ul class="nav nav-tabs" id="myTabs">
-                <li class="active"><a href="#tab1" data-toggle="tab">Erasmus</a></li>
-                <li><a href="#tab2" data-toggle="tab">ESNers</a></li>
-              </ul>
               <div class="tab-content">
-                <div class="tab-pane active" id="tab1">
-                  <?php
-                    $counter=1;
+                <?php
+                $i = 1;
+                foreach ($records as $students) {
+                  if($i == 1) {
+                    echo '<div class="tab-pane active" id="studentTab1">';
+                  } else {
+                    echo '<div class="tab-pane" id="studentTab'.$i.'">';
+                  }
+                  if (!empty($students)) {
                     echo "<table class='table table-striped table-hover'>";
-                    foreach($records as $student) {
+                    $counter = 1;
+                    foreach($students as $student) {
                       echo "<tr><td>$counter</td><td>";
                       echo anchor("registration/student/$student->id","$student->name $student->surname",array('class' => 'underlined'));
                       echo "</td></tr>";
                       $counter++; 
                     }
                     echo "</table>";
-                  ?>
-                </div>
-                <div class="tab-pane" id="tab2">
+                  } else {
+                    echo '<div class="alert alert-warning" role="alert">No events found for this academic year.</div>';
+                  }
+                  echo '</div>';
+                  
+                  $i++;
+                }
+                ?>
+                <div class="tab-pane" id="esnersTab">
                   <?php
                     $counter=1;
                     echo "<table class='table table-striped table-hover'>";
@@ -92,12 +117,11 @@
                       echo "</td></tr>";
                       $counter++;   
                     }
+                    echo "</table>";
                   ?>
-                  </table>
                 </div>
               </div>
-	            
-	          </div><!--/row-->
+            </div><!--/row-->
 	        </div><!--/span-->
 
 	        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">

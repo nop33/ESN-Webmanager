@@ -10,7 +10,14 @@ class Student extends CI_Controller {
 	
 	public function index() {
 		$this->load->model('students_model');
-		$data['records'] = $this->students_model->getAllStudents();
+		$this->load->model('config_model');
+		$active_years = $this->config_model->getActiveYears();
+		$data['ay_titles'] = array();
+		$data['records'] = array();
+		foreach($active_years as $ay) {
+			array_push($data['records'], $this->students_model->getStudentsByAcademicYear($ay));
+			array_push($data['ay_titles'], 'Academic Year '.strval($ay.'-'.(intval($ay)+1)));
+		}
 		$data['recordsESNers'] = $this->students_model->getAllESNers();
 		$data['title'] = 'Students';
 		$data['js'] = array('jquery.quicksearch');

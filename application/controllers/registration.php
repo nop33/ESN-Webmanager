@@ -27,7 +27,14 @@ class Registration extends CI_Controller {
 		$this->load->model('students_model');
 		$this->load->model('events_model');
 		$this->load->model('registration_model');
-		$data['records'] = $this->students_model->getAllStudents();
+		$this->load->model('config_model');
+		$active_years = $this->config_model->getActiveYears();
+		$data['ay_titles'] = array();
+		$data['records'] = array();
+		foreach($active_years as $ay) {
+			array_push($data['records'], $this->students_model->getStudentsByAcademicYear($ay));
+			array_push($data['ay_titles'], 'Academic Year '.strval($ay.'-'.(intval($ay)+1)));
+		}
 		$data['recordsESNers'] = $this->students_model->getAllESNers();
 		$data['event'] = $this->events_model->getEvent($eventId);
 		$data['registrations'] = $this->registration_model->get_num_registrations($eventId);

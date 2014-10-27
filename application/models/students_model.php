@@ -6,7 +6,6 @@ class Students_model extends CI_Model{
 		
 		$this->db->from('students');
 		$this->db->order_by("name", "asc");
-		$this->db->where("semester LIKE '2014-15%'");
 		$query = $this->db->get();
 		
 		if($query->num_rows() > 0){

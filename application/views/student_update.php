@@ -108,6 +108,7 @@
 	          	      		$currentYear = date('Y');
 	          	      		$differencePlus = $currentYear - $startYear + 2;
 	          	      		for($i=0; $i<$differencePlus; $i++) {
+	          	      			$startYear = '2012';
 	          	      			$startYear = $startYear+$i;
 	          	      			$nextYear = $startYear+1;
 	          	      			$nextYearString = substr($nextYear,2,2);

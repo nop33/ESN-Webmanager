@@ -14,7 +14,7 @@ RewriteRule .* index.php/$0 [PT,L]
 
 To create the database together with some sample data, run the `/database/database_structure_and_sample_data.sql`.
 
-In the file `/application/config/config.php`, change the line
+Rename the file `/application/config/config.sample.php` to `/application/config/config.php` and change the line
 ```
 $config['base_url'] = 'http://localhost:8888/ESN-Webmanager/';
 ```

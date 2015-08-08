@@ -6,3 +6,4 @@
 */cache/!.htaccess
 application/config/shareIt.php
 backup_files/
+application/config/config.php

@@ -28,7 +28,7 @@ USE `ci_webmanager`;
 -- Table structure for table `events`
 --
 
-CREATE TABLE `events` (
+CREATE TABLE IF NOT EXISTS `events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` tinyint(4) NOT NULL DEFAULT '1',
   `name` varchar(50) NOT NULL,
@@ -60,7 +60,7 @@ INSERT INTO `events` (`id`, `type`, `name`, `date`, `fee_with`, `fee_without`, `
 -- Table structure for table `registrations`
 --
 
-CREATE TABLE `registrations` (
+CREATE TABLE IF NOT EXISTS `registrations` (
   `student_id` int(11) NOT NULL,
   `event_id` int(11) NOT NULL,
   `paid` float NOT NULL,
@@ -89,7 +89,7 @@ INSERT INTO `registrations` (`student_id`, `event_id`, `paid`, `notes`) VALUES
 -- Table structure for table `students`
 --
 
-CREATE TABLE `students` (
+CREATE TABLE IF NOT EXISTS `students` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `surname` varchar(30) NOT NULL,
@@ -124,7 +124,7 @@ INSERT INTO `students` (`id`, `name`, `surname`, `email`, `phone`, `country`, `h
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(20) NOT NULL,
   `password` varchar(100) NOT NULL,
@@ -141,3 +141,17 @@ INSERT INTO `users` (`id`, `username`, `password`) VALUES
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE IF NOT EXISTS `config` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(100) NOT NULL,
+  `value` varchar(4000) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `type` (`type`)
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8 AUTO_INCREMENT=88 ;
+
+--
+-- 'Dumping data for table `config`
+--
+
+INSERT INTO `config` VALUES (0, 'active_year', '2012');

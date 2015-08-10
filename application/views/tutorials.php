@@ -13,13 +13,6 @@
             </div>
               <div class="row">
                 <div>
-                  <h2>Introduction to WebManager</h2>
-                  <p>Περιγραφή των βασικών λειτουργιών του site.</p>
-                  <div>
-                    <iframe width="420" height="315" src="http://www.youtube.com/embed/7i1TTj-FINs" frameborder="0" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div>
                     <h2>Sample list</h2>
                     <p>Ένα πρότυπο λίστας φοιτητών. Για να ανέβουν μαζικά τα στοιχεία των φοιτητών
                         στην βάση δεδομένων, απαραίτητο είναι ένα έγγραφο excel με την παρακάτω μορφή.<br/>
@@ -33,13 +26,6 @@
                         <a href="<?php echo base_url() ?>files/template.xlsx" type="button" class="btn btn-info">
                           <span class="glyphicon glyphicon-floppy-disk"></span> Download file
                         </a>
-                    </div>
-                </div>
-                <div id="quicksearch-tutorial">
-                    <h2>Introducing Student's Quicksearch</h2>
-                    <p>Για ευκολότερη αναζήτηση κάποιου φοιτητή.</p>
-                    <div>
-                        <iframe width="420" height="315" src="//www.youtube.com/embed/RFdyiXPhz0g" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
               </div><!--/row-->

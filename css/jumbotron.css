@@ -5,7 +5,7 @@ body {
 }
 
 .jumbotron {
-	background-image:url('../images/header-background.jpg');
+	background-image:url('https://unsplash.it/1200/300/?random');
 	background-size: cover;
 	background-position:center;
 	height:300px;

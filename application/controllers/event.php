@@ -1,13 +1,6 @@
 <?php
-class Event extends CI_Controller {
-	
-	public function __construct() {
-		parent::__construct();
-		if($this->session->userdata('logged_in') != true) { //if the user is not logged in
-			redirect('login');
-		}
-	}
-	
+class Event extends MY_Controller {
+
 	public function index() {
 		$this->load->model('events_model');
 		$this->load->model('config_model');

@@ -1,13 +1,6 @@
 <?php
-class Student extends CI_Controller {
-	
-	public function __construct() {
-		parent::__construct();
-		if($this->session->userdata('logged_in') != true) { //if the user is not logged in
-			redirect('login');
-		}
-	}
-	
+class Student extends MY_Controller {
+
 	public function index() {
 		$this->load->model('students_model');
 		$this->load->model('config_model');

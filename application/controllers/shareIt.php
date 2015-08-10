@@ -1,11 +1,8 @@
 <?php
-class ShareIt extends CI_Controller {
-	
+class ShareIt extends MY_Controller {
+
 	function __construct() {
 		parent::__construct();
-		if($this->session->userdata('logged_in') != true) { //if the user is not logged in
-			redirect('login');
-		}
 
 		$this->config->load('shareIt');
 		$fb_config = array(

@@ -5,11 +5,11 @@
     <div class="container">
       <div class="starter-template">
         <div class="row row-offcanvas row-offcanvas-right">
-	        <div class="col-xs-12 col-sm-9">
+            <div class="col-xs-12 col-sm-9">
 
-	          <p class="pull-right visible-xs">
-	            <button type="button" class="btn btn-primary" data-toggle="offcanvas"><span class="glyphicon glyphicon-chevron-right"></button>
-	          </p>
+              <p class="pull-right visible-xs">
+                <button type="button" class="btn btn-primary" data-toggle="offcanvas"><span class="glyphicon glyphicon-chevron-right"></button>
+              </p>
             <?php if(strlen($this->input->get('fb')) > 0) { ?>
               <div class="row">
               <?php if($this->input->get('fb')) { ?>
@@ -40,19 +40,19 @@
               <?php } ?>
               </div> <!-- row end -->
             <?php } ?>
-	          <div class="row">
-	            <?php if(@$user_profile): ?>
-	            	<div>
+              <div class="row">
+                <?php if(@$user_profile): ?>
+                    <div>
                   <blockquote>
                     <p><?php echo "Welcome ".$user_profile['name']."! "; ?><a href="<?php echo $logout_url ?>" class="btn btn-large btn-primary">Logout</a></p>
                   </blockquote>
-	            	</div>
-	                <div>
-	            		<?php echo form_open('shareIt/sharePost',array('class' => 'form-horizontal', 'role' => 'form')); ?>
+                    </div>
+                    <div>
+                        <?php echo form_open('shareIt/sharePost',array('class' => 'form-horizontal', 'role' => 'form')); ?>
                   <div class="col-lg-6" style="border-right:1px solid #ccc;">
-	            			<p class="lead">1. Επέλεξε που θέλεις να κοινοποιήσεις</p>
+                            <p class="lead">1. Επέλεξε που θέλεις να κοινοποιήσεις</p>
                     <div class="well">
-	            			<div class="form-group">
+                            <div class="form-group">
                       <div class="col-lg-12">
                         <input checked type="checkbox" name="shareit[]" value="esn-auth-page" /><i class="facebook-icon facebook-page"></i>ESN AUTH page*
                       </div>
@@ -79,7 +79,7 @@
                         <input checked type="checkbox" name="shareit[]" value="esn-ateith-page" /><i class="facebook-icon facebook-page"></i>ESN ATEITH page*
                       </div>
                     </div>
-                    <p>*Σχετικά με τις pages, για να εμφανίζεται το post σαν να είναι της σελίδας, θα πρέπει ο χρήστης που κάνει το post να είναι στους admin 
+                    <p>*Σχετικά με τις pages, για να εμφανίζεται το post σαν να είναι της σελίδας, θα πρέπει ο χρήστης που κάνει το post να είναι στους admin
                       της σελίδας, αλλιώς το post θα εμφανίζεται στο "Recent Posts by Others".<br>
                       Επίσης υπάρχει ένα άλυτο (προς το παρών) θέμα με την κοινοποίηση link στις pages. Ακόμα και αν είσαι admin, αν το post περιέχει link,
                       θα εμφανιστεί και πάλι στο 'Posts by Others'. Oπότε καλό είναι να αποφεύγονται τα links όταν κοινοποιείτε και στις pages (μέχρι να λυθεί).</p>
@@ -107,36 +107,36 @@
                         <p class="text-muted" id="characters">Characters left: <span id="charsleft">140</span></p>
                       </div>
                     </div>
-	            			<div class="form-group">
-	            			  <div class="col-lg-offset-2 col-lg-10">
-	            			    <button type="submit" class="btn btn-lg btn-block btn-success" name="submit" id="sendposts">Send posts</button>
-	            			  </div>
-	            			</div>
+                            <div class="form-group">
+                              <div class="col-lg-offset-2 col-lg-10">
+                                <button type="submit" class="btn btn-lg btn-block btn-success" name="submit" id="sendposts">Send posts</button>
+                              </div>
+                            </div>
                   </div>
-	            			<!-- <input class="formatted" type="submit" name="submit" value="Send posts" /> -->
-	            		<?php echo form_close(); ?>
-	            	</div>
-	              <?php else: ?>
+                            <!-- <input class="formatted" type="submit" name="submit" value="Send posts" /> -->
+                        <?php echo form_close(); ?>
+                    </div>
+                  <?php else: ?>
                 <div>
                   <p class="lead">Κάνε login με το Facebook για να μοιραστείς το μήνυμά σου</p>
-	                <a href="<?php echo $login_url ?>" class="btn btn-lg btn-block btn-primary ">Login with Facebook</a>
+                    <a href="<?php echo $login_url ?>" class="btn btn-lg btn-block btn-primary ">Login with Facebook</a>
                 </div>
-	              <?php endif; ?>
-	          </div><!--/row-->
-	        </div><!--/span-->
+                  <?php endif; ?>
+              </div><!--/row-->
+            </div><!--/span-->
 
-	        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-	          <div class="well sidebar-nav">
-	            <ul class="nav nav-pills nav-stacked">
-	              <li><a href="<?php echo base_url() ?>event">Events</a></li>
-	        	    <li><a href="<?php echo base_url() ?>student">Students</a></li>
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+              <div class="well sidebar-nav">
+                <ul class="nav nav-pills nav-stacked">
+                  <li><a href="<?php echo base_url() ?>event">Events</a></li>
+                    <li><a href="<?php echo base_url() ?>student">Students</a></li>
                 <li><a href="<?php echo base_url() ?>registration">Registration</a></li>
-	        	    <li class="active"><a href="#">Share it!</a></li>
-	            </ul>
-	          </div><!--/.well -->
-	        </div><!--/span-->
-	      </div><!--/row-->
-	  </div>
+                    <li class="active"><a href="#">Share it!</a></li>
+                </ul>
+              </div><!--/.well -->
+            </div><!--/span-->
+          </div><!--/row-->
+      </div>
     </div> <!-- /container -->
 
     <script type="text/javascript">

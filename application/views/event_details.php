@@ -11,13 +11,13 @@
     </ol>
     <div class="container">
       <div class="starter-template">
-	      <div class="row row-offcanvas row-offcanvas-right">
-	        <div class="col-xs-12 col-sm-9">
+          <div class="row row-offcanvas row-offcanvas-right">
+            <div class="col-xs-12 col-sm-9">
             <div class="row">
-	            <p class="pull-right visible-xs">
-	              <button type="button" class="btn btn-primary" data-toggle="offcanvas"><span class="glyphicon glyphicon-chevron-right"></button>
-	            </p>
-	          </div>
+                <p class="pull-right visible-xs">
+                  <button type="button" class="btn btn-primary" data-toggle="offcanvas"><span class="glyphicon glyphicon-chevron-right"></button>
+                </p>
+              </div>
             <div class="row">
               <?php
                 if(isset($event)) {
@@ -84,12 +84,12 @@
               <?php
                 }
               ?>
-	          </div><!--/row-->
-	        </div><!--/span-->
+              </div><!--/row-->
+            </div><!--/span-->
 
-	        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-	          <div class="buttons-container">
-	          	<a href="<?php echo base_url() ?>event/update/<?php echo $event->id; ?>" type="button" class="btn btn-info btn-block" data-toggle="offcanvas">
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+              <div class="buttons-container">
+                  <a href="<?php echo base_url() ?>event/update/<?php echo $event->id; ?>" type="button" class="btn btn-info btn-block" data-toggle="offcanvas">
                 <span class="glyphicon glyphicon-edit"></span> Edit event
               </a>
               <a href="<?php echo base_url() ?>event/registrations/<?php echo $event->id; ?>" type="button" class="btn btn-primary btn-block" data-toggle="offcanvas">
@@ -98,18 +98,18 @@
               <a href="<?php echo base_url() ?>event/create" type="button" class="btn btn-success btn-block" data-toggle="offcanvas">
                 <span class="glyphicon glyphicon-plus"></span> New event
               </a>
-	          </div>
-	          
-	          <div class="well sidebar-nav">
-	            <ul class="nav nav-pills nav-stacked">
-	              <li><a href="<?php echo base_url() ?>event">Events</a></li>
-	        	    <li><a href="<?php echo base_url() ?>student">Students</a></li>
+              </div>
+
+              <div class="well sidebar-nav">
+                <ul class="nav nav-pills nav-stacked">
+                  <li><a href="<?php echo base_url() ?>event">Events</a></li>
+                    <li><a href="<?php echo base_url() ?>student">Students</a></li>
                 <li><a href="<?php echo base_url() ?>registration">Registration</a></li>
-	        	    <li><a href="<?php echo base_url() ?>shareIt">Share it!</a></li>
-	            </ul>
-	          </div><!--/.well -->
-	        </div><!--/span-->
-	      </div><!--/row-->
-	  </div>
+                    <li><a href="<?php echo base_url() ?>shareIt">Share it!</a></li>
+                </ul>
+              </div><!--/.well -->
+            </div><!--/span-->
+          </div><!--/row-->
+      </div>
     </div> <!-- /container -->
-    
+

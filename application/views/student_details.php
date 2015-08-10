@@ -5,14 +5,14 @@
     </ol>
     <div class="container">
       <div class="starter-template">
-	      <div class="row row-offcanvas row-offcanvas-right">
-	        <div class="col-xs-12 col-sm-9">
+          <div class="row row-offcanvas row-offcanvas-right">
+            <div class="col-xs-12 col-sm-9">
             <div class="row">
-	            <p class="pull-right visible-xs">
-	              <button type="button" class="btn btn-primary" data-toggle="offcanvas"><span class="glyphicon glyphicon-chevron-right"></button>
-	            </p>
+                <p class="pull-right visible-xs">
+                  <button type="button" class="btn btn-primary" data-toggle="offcanvas"><span class="glyphicon glyphicon-chevron-right"></button>
+                </p>
             </div>
-	          <div class="row">
+              <div class="row">
               <?php
                 if(isset($student)) {
               ?>
@@ -46,12 +46,12 @@
                   <div class="col-lg-10">
                     <p class="form-control-static">
                       <?php if($student->section == "esn_auth") {
-                      	echo "ESN AUTH";
+                          echo "ESN AUTH";
                       }
                       elseif($student->section == "esn_uom") {
-                      	echo "ESN UOM";
+                          echo "ESN UOM";
                       } elseif($student->section == "esn_ateith") {
-                      	echo "ESN ATEITH";
+                          echo "ESN ATEITH";
                       } ?>
                     </p>
                   </div>
@@ -60,11 +60,11 @@
                   <label class="col-lg-2 control-label">Type</label>
                   <div class="col-lg-10">
                     <p class="form-control-static">
-                      <?php if($student->type == 'erasmus') { 
-                      	echo "Erasmus";
+                      <?php if($student->type == 'erasmus') {
+                          echo "Erasmus";
                       }
                       else if($student->type == 'esn'){
-                      	echo "ESNer";
+                          echo "ESNer";
                       } ?>
                     </p>
                   </div>
@@ -73,11 +73,11 @@
                   <label class="col-lg-2 control-label">ESN card</label>
                   <div class="col-lg-10">
                     <p class="form-control-static">
-                      <?php if($student->has_esncard) { 
-                      	echo "<img src='".base_url()."images/check.png' width='16px'/>";
+                      <?php if($student->has_esncard) {
+                          echo "<img src='".base_url()."images/check.png' width='16px'/>";
                       }
                       else {
-                      	echo "<img src='".base_url()."images/delete.png'/>";
+                          echo "<img src='".base_url()."images/delete.png'/>";
                       } ?>
                     </p>
                   </div>
@@ -94,24 +94,24 @@
                   <div class="col-lg-10">
                     <p class="form-control-static">
                       <?php
-                      															// expression: YYYY-YY_a
-                      	$semesterYear 	= substr($student->semester, 0, -5);	// get the first 4 chars
-                      	$semesterSeason	= substr($student->semester, 8, 1);		// get the last char
-                      	$semesterYearPlus = $semesterYear+1;
-                      	switch ($semesterSeason) {
-                      		case 'a':
-                      			$semesterSeason = 'autumn';
-                      			break;
-                      		case 's':
-                      			$semesterSeason = 'spring';
-                      			break;
-                      		case 'f':
-                      			$semesterSeason = 'full year';
-                      			break;
-                      		default:
-                      			break;
-                      	}
-                      	echo "$semesterYear-$semesterYearPlus $semesterSeason";
+                                                                                  // expression: YYYY-YY_a
+                          $semesterYear     = substr($student->semester, 0, -5);    // get the first 4 chars
+                          $semesterSeason    = substr($student->semester, 8, 1);        // get the last char
+                          $semesterYearPlus = $semesterYear+1;
+                          switch ($semesterSeason) {
+                              case 'a':
+                                  $semesterSeason = 'autumn';
+                                  break;
+                              case 's':
+                                  $semesterSeason = 'spring';
+                                  break;
+                              case 'f':
+                                  $semesterSeason = 'full year';
+                                  break;
+                              default:
+                                  break;
+                          }
+                          echo "$semesterYear-$semesterYearPlus $semesterSeason";
                       ?>
                     </p>
                   </div>
@@ -121,28 +121,28 @@
               <?php
                 }
               ?>
-	          </div><!--/row-->
-	        </div><!--/span-->
+              </div><!--/row-->
+            </div><!--/span-->
 
-	        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-	          <div class="buttons-container">
-	          	<a href="<?php echo base_url() ?>student/update/<?php echo $student->id; ?>" type="button" class="btn btn-info btn-block" data-toggle="offcanvas">
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+              <div class="buttons-container">
+                  <a href="<?php echo base_url() ?>student/update/<?php echo $student->id; ?>" type="button" class="btn btn-info btn-block" data-toggle="offcanvas">
                 <span class="glyphicon glyphicon-edit"></span> Edit student
               </a>
               <a href="<?php echo base_url() ?>student/delete/<?php echo $student->id; ?>" type="button" class="btn btn-danger btn-block" data-toggle="offcanvas" onclick="return confirm('Really delete?');">
                 <span class="glyphicon glyphicon-minus"></span> Delete student
               </a>
-	          </div>
-	          
-	          <div class="well sidebar-nav">
-	            <ul class="nav nav-pills nav-stacked">
-	              <li><a href="<?php echo base_url() ?>event">Events</a></li>
-	        	    <li><a href="<?php echo base_url() ?>student">Students</a></li>
+              </div>
+
+              <div class="well sidebar-nav">
+                <ul class="nav nav-pills nav-stacked">
+                  <li><a href="<?php echo base_url() ?>event">Events</a></li>
+                    <li><a href="<?php echo base_url() ?>student">Students</a></li>
                 <li><a href="<?php echo base_url() ?>registration">Registration</a></li>
-	        	    <li><a href="<?php echo base_url() ?>shareIt">Share it!</a></li>
-	            </ul>
-	          </div><!--/.well -->
-	        </div><!--/span-->
-	      </div><!--/row-->
-	  </div>
+                    <li><a href="<?php echo base_url() ?>shareIt">Share it!</a></li>
+                </ul>
+              </div><!--/.well -->
+            </div><!--/span-->
+          </div><!--/row-->
+      </div>
     </div> <!-- /container -->

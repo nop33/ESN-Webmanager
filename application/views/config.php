@@ -4,14 +4,14 @@
     </ol>
     <div class="container">
       <div class="starter-template">
-	      <div class="row row-offcanvas row-offcanvas-right">
-	        <div class="col-xs-12 col-sm-9">
+          <div class="row row-offcanvas row-offcanvas-right">
+            <div class="col-xs-12 col-sm-9">
             <div class="row">
-	            <p class="pull-right visible-xs">
-	              <button type="button" class="btn btn-primary" data-toggle="offcanvas"><span class="glyphicon glyphicon-chevron-right"></button>
-	            </p>
+                <p class="pull-right visible-xs">
+                  <button type="button" class="btn btn-primary" data-toggle="offcanvas"><span class="glyphicon glyphicon-chevron-right"></button>
+                </p>
             </div>
-	          <div class="row">
+              <div class="row">
               <div>
                 <?php echo form_open('config/save',array('class' => 'form-horizontal', 'role' => 'form'));?>
                 <div class="form-group">
@@ -68,21 +68,21 @@
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary" name="submit">Save</button>
                 </div>
-                <?php echo form_close()?> 
+                <?php echo form_close()?>
               </div>
             </div><!--/row-->
-	        </div><!--/span-->
+            </div><!--/span-->
 
-	        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-	          <div class="well sidebar-nav">
-	            <ul class="nav nav-pills nav-stacked">
-	              <li><a href="<?php echo base_url() ?>event">Events</a></li>
-	        	    <li><a href="<?php echo base_url() ?>student">Students</a></li>
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+              <div class="well sidebar-nav">
+                <ul class="nav nav-pills nav-stacked">
+                  <li><a href="<?php echo base_url() ?>event">Events</a></li>
+                    <li><a href="<?php echo base_url() ?>student">Students</a></li>
                 <li><a href="<?php echo base_url() ?>registration">Registration</a></li>
-	        	    <li><a href="<?php echo base_url() ?>site/share">Share it!</a></li>
-	            </ul>
-	          </div><!--/.well -->
-	        </div><!--/span-->
-	      </div><!--/row-->
-	  </div>
+                    <li><a href="<?php echo base_url() ?>site/share">Share it!</a></li>
+                </ul>
+              </div><!--/.well -->
+            </div><!--/span-->
+          </div><!--/row-->
+      </div>
     </div> <!-- /container -->

@@ -5,12 +5,12 @@
     </ol>
     <div class="container">
       <div class="starter-template">
-	      <div class="row row-offcanvas row-offcanvas-right">
-	        <div class="col-xs-12 col-sm-9">
+          <div class="row row-offcanvas row-offcanvas-right">
+            <div class="col-xs-12 col-sm-9">
             <div class="row">
-	            <p class="pull-right visible-xs">
-	              <button type="button" class="btn btn-primary" data-toggle="offcanvas"><span class="glyphicon glyphicon-chevron-right"></button>
-	            </p>
+                <p class="pull-right visible-xs">
+                  <button type="button" class="btn btn-primary" data-toggle="offcanvas"><span class="glyphicon glyphicon-chevron-right"></button>
+                </p>
             </div>
             <?php if($this->input->get('success')) { ?>
               <div class="row">
@@ -66,11 +66,11 @@
 
             <div class="row" id="student-pills">
                 <ul class="nav nav-pills" id="myStudentTabs">
-                  <?php 
+                  <?php
                   $i = 1;
                   foreach ($ay_titles as $title) {
                     if($i == 1) {
-                      echo '<li class="active"><a href="#studentTab1" data-toggle="tab">'.$title.'</a></li>'; 
+                      echo '<li class="active"><a href="#studentTab1" data-toggle="tab">'.$title.'</a></li>';
                     } else {
                       echo '<li><a href="#studentTab'.$i.'" data-toggle="tab">'.$title.'</a></li>';
                     }
@@ -96,14 +96,14 @@
                       echo "<tr><td>$counter</td><td>";
                       echo anchor("registration/student/$student->id","$student->name $student->surname",array('class' => 'underlined'));
                       echo "</td></tr>";
-                      $counter++; 
+                      $counter++;
                     }
                     echo "</table>";
                   } else {
                     echo '<div class="alert alert-warning" role="alert">No events found for this academic year.</div>';
                   }
                   echo '</div>';
-                  
+
                   $i++;
                 }
                 ?>
@@ -115,32 +115,32 @@
                       echo "<tr><td>$counter</td><td>";
                       echo anchor("registration/student/$student->id","$student->name $student->surname");
                       echo "</td></tr>";
-                      $counter++;   
+                      $counter++;
                     }
                     echo "</table>";
                   ?>
                 </div>
               </div>
             </div><!--/row-->
-	        </div><!--/span-->
+            </div><!--/span-->
 
-	        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
             <div class="buttons-container">
               <a href="<?php echo base_url() ?>student/create" type="button" class="btn btn-success btn-block" data-toggle="offcanvas">
                 <span class="glyphicon glyphicon-plus"></span> New student
               </a>
             </div>
-	          <div class="well sidebar-nav">
-	            <ul class="nav nav-pills nav-stacked">
-	              <li ><a href="<?php echo base_url() ?>event">Events</a></li>
-	        	    <li><a href="<?php echo base_url() ?>student">Students</a></li>
+              <div class="well sidebar-nav">
+                <ul class="nav nav-pills nav-stacked">
+                  <li ><a href="<?php echo base_url() ?>event">Events</a></li>
+                    <li><a href="<?php echo base_url() ?>student">Students</a></li>
                 <li><a href="<?php echo base_url() ?>registration">Registration</a></li>
-	        	    <li><a href="<?php echo base_url() ?>shareIt">Share it!</a></li>
-	            </ul>
-	          </div><!--/.well -->
-	        </div><!--/span-->
-	      </div><!--/row-->
-	  </div>
+                    <li><a href="<?php echo base_url() ?>shareIt">Share it!</a></li>
+                </ul>
+              </div><!--/.well -->
+            </div><!--/span-->
+          </div><!--/row-->
+      </div>
     </div> <!-- /container -->
 
     <script type="text/javascript">

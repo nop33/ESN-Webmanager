@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <link rel="shortcut icon" href="<?php echo base_url() ?>images/favicon.ico">
-	  <meta name="author" content="Ilias Trichopoulos">
-
-    <title>ESN Web Manager - <?php echo $title; ?></title>
-
-	  <link href="<?php echo base_url() ?>css/bootstrap.min.css" rel="stylesheet">
+        <meta name="author" content="Ilias Trichopoulos">
+        <title>ESN Web Manager - <?php echo $title; ?></title>
+        <link href="<?php echo base_url() ?>css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>css/jumbotron.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -20,17 +18,17 @@
       }
     ?>
 
-
     <script data-cfasync="false" type="text/javascript" src="<?php echo base_url() ?>js/jquery.min.js"></script>
     <script data-cfasync="false" type="text/javascript" src="<?php echo base_url() ?>js/bootstrap.min.js"></script>
     <script data-cfasync="false" type="text/javascript" src="<?php echo base_url() ?>js/offcanvas.js"></script>
-    
-    <?php 
+
+    <?php
     if(isset($js))
       foreach ($js as $filename) {
         echo $filename;
       }
     ?>
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="<?php echo base_url() ?>js/html5shiv.js"></script>
@@ -95,16 +93,15 @@
     <?php } ?>
 
     <?php echo $body; ?>
-    
+
     <div class="container">
       <hr>
       <footer>
-        <p>developed by Ilias Trichopoulos 
-        	<a href="http://github.com/nop33"><i class="fa fa-github-square"></i></a> 
-        	<a href="https://www.linkedin.com/in/iliastrichopoulos"><i class="fa fa-linkedin-square"></i></a>
-        	| ESN AUTH</p>
+        <p>developed by Ilias Trichopoulos
+            <a href="http://github.com/nop33"><i class="fa fa-github-square"></i></a>
+            <a href="https://www.linkedin.com/in/iliastrichopoulos"><i class="fa fa-linkedin-square"></i></a>
+            | ESN AUTH</p>
       </footer>
     </div>
-
   </body>
 </html>

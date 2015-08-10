@@ -21,11 +21,11 @@ class Login extends CI_Controller {
 		$password = $this->input->post('password');
 		if(isset($username) && isset($password) && $username!="" && $password!="") {
 			$query = $this->login_model->validate($username,$password);
-
 			if($query) { //if the users credentials are validated
 				$data = array(
 					'username' => $username,
-					'logged_in' => true
+					'logged_in' => true,
+                    'is_admin' => $query->is_admin
 					);
 				$this->session->set_userdata($data);
 				redirect('site');

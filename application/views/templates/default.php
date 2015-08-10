@@ -54,6 +54,7 @@
             <li><a href="<?php echo base_url() ?>site"><span class="glyphicon glyphicon-home"></span> Home</a></li>
             <li><a href="<?php echo base_url() ?>site/about"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
             <li><a href="<?php echo base_url() ?>site/tutorials"><span class="glyphicon glyphicon-book"></span> Tutorials</a></li>
+            <?php if($this->session->userdata('is_admin'))  { ?><li><a href="<?php echo base_url() ?>config"><span class="glyphicon glyphicon-cog"></span> Configuration</a></li><?php } ?>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
